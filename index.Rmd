@@ -3,6 +3,7 @@ title: "teste-flex"
 output: 
   flexdashboard::flex_dashboard:
     logo: logo-proex-ufscar.png
+    favicon: bar-graph.png
     source_code: embed
     orientation: columns
     vertical_layout: fill
