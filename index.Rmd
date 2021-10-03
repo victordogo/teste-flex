@@ -1,0 +1,95 @@
+---
+title: "teste-flex"
+output: 
+  flexdashboard::flex_dashboard:
+    source_code: embed
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(ggplot2)
+library(dplyr)
+library(plotly)
+```
+
+Gráficos
+================================================================
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+# Chart A
+
+chart_a <- mtcars %>% 
+  ggplot(aes(x=mpg,y=qsec))+
+  geom_point()+
+  labs(x="Milhas por Galão",
+       y="Tempo para cruzar 1/4 de milha em segundos",
+       title="Dispersão entre 'mpg' e 'qsec'")
+
+chart_a %>% ggplotly()
+
+```
+
+### Chart B
+
+```{r}
+
+# Chart B
+
+chart_b <- mtcars %>% 
+  ggplot(aes(x=qsec))+
+  geom_density()+
+  labs(x="Tempo para cruzar 1/4 de milha em segundos",
+       y="Distribuição",
+       title="Distribuição de Carros de acordo com 'qsec'")
+
+chart_b %>% ggplotly()
+
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart C
+
+```{r}
+
+# Chart C
+
+mtcars %>% 
+  group_by(cyl) %>% 
+  summarise(n=n()) %>% 
+  knitr::kable(
+    col.names = c("Cilindros","Número de Carros"),
+    caption = "Distribuição do dataset 'mtcars' por nº de cilindradas"
+  )
+
+```
+
+### Chart D
+
+```{r}
+
+chart_d <- mtcars %>% 
+  ggplot()+
+  geom_histogram(aes(x=wt),
+         fill="red",
+         color="black")+
+  labs(x="Peso em 1000 libras",
+       y="Frequência",
+       title="Histograma do dataset 'mtcars' por peso")
+
+chart_d %>% ggplotly()
+
+```
+
+Sobre
+======================================================
+
+Este é um teste de dashboard estático utilizando o pacote `{flexdashboard}` no R Markdown. Os gráficos presentes utilizam a base de dados `mtcars` e os pacotes `{ggplot2}` e `{plotly}`.
