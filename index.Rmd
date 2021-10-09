@@ -99,7 +99,7 @@ Sobre
 
 Este é um teste de dashboard estático utilizando o pacote `{flexdashboard}` no R Markdown. Os gráficos presentes utilizam a base de dados `mtcars` e os pacotes `{ggplot2}` e `{plotly}`.
 
-Ele está disponível temporariamente.
+Você pode visualizar o repositório deste site em [victordogo/teste-flex](https://github.com/victordogo/teste-flex) no GitHub.
 
 Referências:
 
