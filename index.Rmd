@@ -1,5 +1,8 @@
 ---
 title: "teste-flex"
+bibliography: ref.bib
+csl: abnt.csl
+nocite: '@*'
 output: 
   flexdashboard::flex_dashboard:
     logo: logo-proex-ufscar.png
@@ -97,3 +100,7 @@ Sobre
 Este é um teste de dashboard estático utilizando o pacote `{flexdashboard}` no R Markdown. Os gráficos presentes utilizam a base de dados `mtcars` e os pacotes `{ggplot2}` e `{plotly}`.
 
 Ele está disponível temporariamente.
+
+Referências:
+
+<div id="refs"></div>
