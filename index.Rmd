@@ -1,12 +1,12 @@
 ---
 title: "teste-flex"
-bibliography: ref.bib
-csl: abnt.csl
+bibliography: refs/ref.bib
+csl: refs/abnt.csl
 nocite: '@*'
 output: 
   flexdashboard::flex_dashboard:
-    logo: logo-proex-ufscar.png
-    favicon: icon.png
+    logo: images/logo-proex-ufscar.png
+    favicon: images/icon.png
     source_code: embed
     orientation: columns
     vertical_layout: fill
